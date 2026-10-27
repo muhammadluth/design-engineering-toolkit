@@ -1,4 +1,4 @@
-name: Package reviewed plugin
+name: Package plugin
 on:
   workflow_dispatch:
 permissions:
@@ -6,17 +6,44 @@ permissions:
 jobs:
   package:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: |
+      - name: Check snapshot availability
+        id: snapshot
+        shell: bash
+        run: |
+          if [[ -f sources.lock.json && -d upstream ]]; then
+            echo "reviewed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "reviewed=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::No committed upstream snapshot exists. Building a bootstrap CANDIDATE; this is not a reviewed release."
+          fi
+      - name: Bootstrap candidate when snapshots are absent
+        if: steps.snapshot.outputs.reviewed == 'false'
+        run: python scripts/sync.py
+      - name: Build and validate package
+        run: |
           python scripts/build.py
           python scripts/validate.py
+      - name: Publish job summary
+        env:
+          REVIEWED: ${{ steps.snapshot.outputs.reviewed }}
+        run: |
+          if [[ "$REVIEWED" == "true" ]]; then
+            echo "### Reviewed snapshot package" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "### Bootstrap candidate — NOT reviewed" >> "$GITHUB_STEP_SUMMARY"
+            echo "Merge the weekly upstream snapshot PR before relying on this artifact as a reviewed release." >> "$GITHUB_STEP_SUMMARY"
+          fi
       - uses: actions/upload-artifact@v4
         with:
-          name: reviewed-plugin-package
+          name: plugin-package
           path: |
             dist/design-engineering-toolkit.zip
             dist/SHA256SUMS
+            sources.lock.json
+          if-no-files-found: error
