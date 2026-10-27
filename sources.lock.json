@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "sources": {
+    "design-reference-library": {
+      "commit": "3b605329240ce735b510037cca322f1831fdd7f8",
+      "files": 169,
+      "path": ".",
+      "repo": "voltagent/awesome-design-md",
+      "sha256": "5ffeef82386d26fa4fd8542ec299b551ad814f708037d99ba04dcbc3829a05f7"
+    },
+    "frontend-design": {
+      "commit": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "files": 2,
+      "path": "skills/frontend-design",
+      "repo": "anthropics/skills",
+      "sha256": "47454eb43afe0e5963022d4b0d9854a4f8e969e6033827d9cc4c7580835b1f2e"
+    },
+    "playwright-cli": {
+      "commit": "b1a5903c5b633b8c9f843ad7b629c2a78437040c",
+      "files": 11,
+      "path": "skills/playwright-cli",
+      "repo": "microsoft/playwright-cli",
+      "sha256": "0ebd43559ef8f45e7da8a78d8725548a3d6e2f2bf5b6c4eb5874afae0556653f"
+    },
+    "taste-skill": {
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "files": 23,
+      "path": "skills/taste-skill",
+      "repo": "leonxlnx/taste-skill",
+      "sha256": "28b305b2464e117f07fcfa488b49099e4630fb39af7eedf5d89fe912c088a997"
+    },
+    "web-design-guidelines": {
+      "commit": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "files": 1,
+      "path": "skills/web-design-guidelines",
+      "repo": "vercel-labs/agent-skills",
+      "sha256": "1fe19f16dfe47a225fb52fe485c7092d880c2d99cb8950ea83f20259ad4dc2f7"
+    }
+  }
+}
