@@ -24,6 +24,8 @@ jobs:
           python scripts/build.py
           python scripts/validate.py
       - name: Create auditable update PR
+        id: update_pr
+        continue-on-error: true
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -37,11 +39,19 @@ jobs:
           body: |
             Review source commit SHAs, license and untrusted instruction changes before merging.
             This PR does not deploy to ChatGPT.
-      - uses: actions/upload-artifact@v4
+      - name: Explain PR permission failure
+        if: steps.update_pr.outcome == 'failure'
+        run: |
+          echo "::warning::PR could not be created. In Settings > Actions > General enable 'Allow GitHub Actions to create and approve pull requests'."
+          echo "### Manual review needed" >> "$GITHUB_STEP_SUMMARY"
+          echo "PR creation failed. Enable the repository Actions PR permission and re-run this workflow. Candidate artifacts are still uploaded." >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload candidate even when PR creation is denied
+        if: always()
+        uses: actions/upload-artifact@v4
         with:
           name: candidate-plugin
           path: |
             dist/design-engineering-toolkit.zip
             dist/SHA256SUMS
             sources.lock.json
-          if-no-files-found: error
+          if-no-files-found: warn
