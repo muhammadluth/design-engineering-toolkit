@@ -1,0 +1,22 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "design-engineering-toolkit",
+  "version": "0.1.0",
+  "description": "Curated design engineering skills with provenance and reviewed updates.",
+  "author": {
+    "name": "Design Engineering Toolkit"
+  },
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Design Engineering Toolkit",
+        "shortDescription": "Frontend design skill toolkit",
+        "longDescription": "Frontend design, taste, design system references, accessibility review, and Playwright CLI instructions.",
+        "developerName": "Design Engineering Toolkit",
+        "category": "Productivity",
+        "capabilities": [],
+        "defaultPrompt": "Use the relevant design skill to build, review or test my frontend."
+      }
+    }
+  }
+}

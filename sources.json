@@ -1,0 +1,39 @@
+{
+  "sources": [
+    {
+      "name": "frontend-design",
+      "repo": "anthropics/skills",
+      "ref": "main",
+      "path": "skills/frontend-design",
+      "type": "skill"
+    },
+    {
+      "name": "taste-skill",
+      "repo": "leonxlnx/taste-skill",
+      "ref": "main",
+      "path": "skills/taste-skill",
+      "type": "skill"
+    },
+    {
+      "name": "design-reference-library",
+      "repo": "voltagent/awesome-design-md",
+      "ref": "main",
+      "path": ".",
+      "type": "design-library"
+    },
+    {
+      "name": "web-design-guidelines",
+      "repo": "vercel-labs/agent-skills",
+      "ref": "main",
+      "path": "skills/web-design-guidelines",
+      "type": "skill"
+    },
+    {
+      "name": "playwright-cli",
+      "repo": "microsoft/playwright-cli",
+      "ref": "main",
+      "path": "skills/playwright-cli",
+      "type": "skill"
+    }
+  ]
+}
