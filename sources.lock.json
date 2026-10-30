@@ -2,14 +2,14 @@
   "schema": 1,
   "sources": {
     "design-reference-library": {
-      "commit": "3b605329240ce735b510037cca322f1831fdd7f8",
+      "commit": "fcc70284932276d085f01ef9f83edde90b1258cb",
       "files": 169,
       "path": ".",
       "repo": "voltagent/awesome-design-md",
-      "sha256": "5ffeef82386d26fa4fd8542ec299b551ad814f708037d99ba04dcbc3829a05f7"
+      "sha256": "ddc88cb533977b21940bcf6408cace934c75b2a8935ccaf9462d0675c11e1371"
     },
     "frontend-design": {
-      "commit": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "commit": "ca45fc496a3436251f191354091d557da31c15b5",
       "files": 2,
       "path": "skills/frontend-design",
       "repo": "anthropics/skills",
