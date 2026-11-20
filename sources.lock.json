@@ -2,32 +2,32 @@
   "schema": 1,
   "sources": {
     "design-reference-library": {
-      "commit": "3b605329240ce735b510037cca322f1831fdd7f8",
+      "commit": "fcc70284932276d085f01ef9f83edde90b1258cb",
       "files": 169,
       "path": ".",
       "repo": "voltagent/awesome-design-md",
-      "sha256": "5ffeef82386d26fa4fd8542ec299b551ad814f708037d99ba04dcbc3829a05f7"
+      "sha256": "ddc88cb533977b21940bcf6408cace934c75b2a8935ccaf9462d0675c11e1371"
     },
     "frontend-design": {
-      "commit": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "commit": "e4bb5d960d87126ff3b3a8af1a104b7db67560ba",
       "files": 2,
       "path": "skills/frontend-design",
       "repo": "anthropics/skills",
       "sha256": "47454eb43afe0e5963022d4b0d9854a4f8e969e6033827d9cc4c7580835b1f2e"
     },
     "playwright-cli": {
-      "commit": "b1a5903c5b633b8c9f843ad7b629c2a78437040c",
+      "commit": "c872a33cec77fa03c28fa7c6d1ad99d15d04ce42",
       "files": 11,
       "path": "skills/playwright-cli",
       "repo": "microsoft/playwright-cli",
-      "sha256": "0ebd43559ef8f45e7da8a78d8725548a3d6e2f2bf5b6c4eb5874afae0556653f"
+      "sha256": "e97e52c00533d9655b7ee13efd7fca47a474670e8fe15e73178e2bf64ef65532"
     },
     "taste-skill": {
-      "commit": "12af471f627f866411b4bd785b19646d3672784c",
-      "files": 23,
+      "commit": "f6b76575f949707b4e3c37cd86cb44b0b98643e8",
+      "files": 158,
       "path": "skills/taste-skill",
       "repo": "leonxlnx/taste-skill",
-      "sha256": "28b305b2464e117f07fcfa488b49099e4630fb39af7eedf5d89fe912c088a997"
+      "sha256": "4fa09b34116dabe00a6725ce9b701ada7aeca711b2ea39d22961ab8c926f68f1"
     },
     "web-design-guidelines": {
       "commit": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
